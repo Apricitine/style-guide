@@ -1,0 +1,118 @@
+:root {
+  --absolute-background: rgb(37, 37, 37);
+  --container-background: rgb(24, 24, 24);
+  --line-divider-color: rgb(115, 115, 115);
+  --text-color: rgb(255, 255, 255);
+  --slightly-darker-text-color: rgb(210, 210, 210);
+  --red-text-color: rgb(255, 80, 80);
+
+  --js-color: rgb(255, 237, 41);
+  --js-text-color: rgb(255, 244, 126);
+
+  --html-color: rgb(255, 140, 0);
+  --html-text-color: rgb(255, 194, 120);
+  
+  --css-color: rgb(31, 121, 255);
+  --css-text-color: rgb(104, 165, 255);
+}
+
+*, *::before, *::after {
+  font-family: "Nunito", 'Gill Sans MwT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--text-color);
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+*::selection {
+  background-color: rgb(159, 207, 109);
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  background: var(--absolute-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 5%;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h2[js] {
+  color: rgb(255, 237, 41);
+}
+
+h2[html] {
+  color: var(--html-color);
+}
+
+h2[css] {
+  color: var(--css-color);
+}
+
+div[container] {
+  background: var(--container-background);
+  width: 75%;
+  border-radius: 30px;
+  background-attachment: local;
+  padding: 5%;
+  font-family: 'Trebuchet MS', 
+    'Lucida Sans Unicode', 
+    'Lucida Grande', 
+    'Lucida Sans', 
+    Arial, 
+    sans-serif;
+}
+
+div[line-divider] {
+  background-color: var(--line-divider-color);
+  height: 5px;
+  border-radius: 30px;
+}
+
+div[main-content] {
+  line-height: 1.5rem;
+}
+
+div[js] {
+  color: var(--js-text-color);
+}
+
+code {
+  font-size: 0.8rem;
+  font-family:'Courier New', Courier, monospace;
+  background: var(--absolute-background);
+  border-radius: 7.5px;  
+  padding: 2px;
+}
+
+div[html] {
+  color: var(--html-text-color);
+}
+
+div[css] {
+  color: var(--css-text-color);
+}
+
+span[red-underline-light] {
+  color: var(--red-text-color);
+  text-decoration: underline;
+}
+
+div[table-of-contents] {
+  font-style: italic;
+  color: var(--slightly-darker-text-color);
+}
+
+div[table-of-contents]>ul>li.table-of-contents-list-element {
+  list-style-type: circle;
+}
